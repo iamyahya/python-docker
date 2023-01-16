@@ -85,7 +85,7 @@ class CloudWatchHandler:
             )
             print(message)
         except BaseClientExceptions:
-            click.UsageError("Unexpected error on AWS host side")
+            raise click.UsageError("Unexpected error on AWS host side")
 
 
 @click.command()
